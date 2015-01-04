@@ -42,7 +42,6 @@ def main():
     config = read_config(opts.config)
     last_update = rrd.find_next_ts(config['kwh_file'])
     logging.info("Last update: {0}".format(last_update))
-    quit()
     archive = XMLLoader.download_archive(last_update, config['login'] , config['password'])
     #archive = open('/home/max/tmp/test.zip', 'r').read()
     files = XMLLoader.extract_file(archive)
