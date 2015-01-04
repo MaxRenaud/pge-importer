@@ -1,0 +1,10 @@
+#Rename to 'config'
+[config]
+#PG&E Login
+login: your@email.com
+#PG&E Password
+password: YourPassword
+#Cacti's rrd file for usage
+kwh_file: /var/www/html/cacti/rra/watt_hour_26.rrd
+#Cacti's rrd file for cost
+cost_file: /var/www/html/cacti/rra/cent_hour_27.rrd
