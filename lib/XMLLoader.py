@@ -40,7 +40,7 @@ def parse_file(file_name):
         for interval in i['content']['IntervalBlock']['IntervalReading']:
             # value is in Watt-hour and cost is in 0.001 cents
             # Cost might be missing, which translates into a 0 on PG&E's website
-            intervals.append((int(interval['timePeriod']['start'])+int(interval['timePeriod']['duration']),
+            intervals.append((int(interval['timePeriod']['start']),
                         int(interval['value']),
                         float(interval.get('cost',0))/1000))
     return intervals
